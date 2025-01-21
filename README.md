@@ -2,7 +2,7 @@
 
 
 ### 1: Collecting & Cleaning
-The following variables were collected...
+The following variables were collected
 - Population density
 - Monthly Metrocard counts
 - MTA Major incidents
