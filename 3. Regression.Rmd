@@ -1,0 +1,49 @@
+```{r}
+install.packages('stargazer')
+
+library(stargazer)
+install.packages('knitr')
+library(knitr)
+summary(Merged.Dataset)
+```
+
+```{r}
+# Model 1: Number of Incidents = B0 + B(Avg Light Intensity)
+model <- lm(Total.Number.of.incidents ~ Avg.Light.Intensity.Value, data = Merged.Dataset)
+summary(model)
+
+# Model 2: Monthly Metro Card Count = B0 + B(Avg Light Intensity)
+model2 <- lm(Avg.Monthly.Metro.Card.Count ~ Avg.Light.Intensity.Value, data = Merged.Dataset)
+summary(model)
+
+```
+```{r}
+# Using Stargazer to create output table
+stargazer(model, model2, type="html", align=TRUE, title='Regression Summary',
+          dep.var.labels=c("Total Number of Incidents","Avg Monthly Metro Card Count"),
+          covariate.labels=c("Avg Light Intensity Value"))
+```
+# VISUALIZING HTML REGRESSION SUMMARY
+
+```{r}
+knitr::include_graphics("/Users/isabellagermani/Desktop/Projects/NASA Nighttime Lights & MTA Infrastructure/TABLEE.png")
+```
+
+
+# SOURCES #
+Hlavac, Marek (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables.
+R package version 5.2.3. https://CRAN.R-project.org/package=stargazer 
+
+Stargazer documentation: https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf
+
+Stargazer with R: https://www.statology.org/stargazer-r/
+
+Stack overflow help: https://arc.net/l/quote/dswzrfwa
+
+Code to table: https://stackoverflow.com/questions/45724432/stargazer-output-is-code-not-a-table
+
+Converting to html: https://www.princeton.edu/~otorres/NiceOutputR.pdf
+
+knitr pkg: https://github.com/yihui/knitr
+
+R markdown & images: https://notes.peter-baumgartner.net/2021/05/07/images-in-rmarkdown-files/#example 
