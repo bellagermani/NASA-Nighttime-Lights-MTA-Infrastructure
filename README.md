@@ -1,16 +1,18 @@
 # NASA-Nighttime-Lights-MTA-Infrastructure
-Data was collected in the New York City area over the years 2015 - 2020. 
+Data was collected from the New York City area over the years 2015 - 2020. 
 All final variables are formatted as monthly values over this period
 
+
 ### 1: Collecting & Cleaning
-The following variables were collected
-- Population density
+Variables:
+- NYC Population density
 - Monthly Metrocard counts
 - MTA Major incidents
 - Nighttime Light intesity values 
 
 
 ### 2: Visualizations
+Include...
 1. Heatmap of all variables
 2. Linegraph of normalized level of urbanization, metrocard counts, & MTA incidents
 3. Linegraph of number of incidents over time, broken down by type of incident
