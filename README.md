@@ -1,5 +1,6 @@
 # NASA-Nighttime-Lights-MTA-Infrastructure
-
+Data was collected in the New York City area over the years 2015 - 2020. 
+All final variables are formatted as monthly values over this period
 
 ### 1: Collecting & Cleaning
 The following variables were collected
